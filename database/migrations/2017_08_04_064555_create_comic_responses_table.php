@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComicsTable extends Migration
+class CreateComicResponsesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateComicsTable extends Migration
      */
     public function up()
     {
-        Schema::create('comics', function (Blueprint $table) {
+        Schema::create('comic_responses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('image_url');
-            $table->string('title');
-            $table->text('description')->nullable();
-            $table->integer('user_id');
+            $table->integer('original_comic_id');
+            $table->integer('response_comic');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateComicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comics');
+        Schema::dropIfExists('comic_responses');
     }
 }

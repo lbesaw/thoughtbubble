@@ -9,21 +9,12 @@
         <title>Laravel</title>
         </head>
         <body>
-        <ul>
-            @foreach ($comics as $comic)
-                <li> {{ $comic->title }} </li>
-            @endforeach
-        </ul>
-        <div id="root">
-            <navbar></navbar>
-            <div class="container text-center" id="main-container">
-                <div class="box">
-                    <img  id="comic-image" src="/images/comic.png">
-                </div>
-            </div>
-            <bottomnav></bottomnav>
-        </div>
-              <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+       
+       
+        @yield('content')
+
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script type="text/javascript" src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
         <script type="text/javascript" src="/js/app.js"></script>
   
