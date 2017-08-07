@@ -28,13 +28,13 @@ class ComicsController extends Controller
     	request()->file('image_url')->move(
     		base_path() . '/public/images/', $imageName);
 
-    	Comic::create([
+    	$comic = Comic::create([
     		'title' => request('title'),
     		'description' => request('description'),
-    		'image_url' => 'public/images/' . $imageName,
+    		'image_url' => '/images/' . $imageName,
     		'user_id' => 0
     		]);
 
-    	return redirect('/');
+    	return redirect('/comic/'. $comic->id);
     }
 }

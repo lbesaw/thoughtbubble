@@ -15,7 +15,7 @@ class CreateComicResponsesTable extends Migration
     {
         Schema::create('comic_responses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('original_comic_id');
+            $table->integer('comic_id');
             $table->integer('response_comic');
             $table->timestamps();
         });

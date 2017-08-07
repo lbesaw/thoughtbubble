@@ -27,13 +27,7 @@
 	    <input class="input" type="file" id="imageurl" name="image_url" required>
 	  </div>
 	</div>
-	<div class="has-text-danger">
-		<ul>
-			@foreach ($errors->all() as $error) 
-				<li> {{ $error }} </li> 
-			@endforeach
-		</ul>
-	</div>
+	@include('layouts.errors')
 
 	<div class="field is-grouped">
 	  <div class="control">
