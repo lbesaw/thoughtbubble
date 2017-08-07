@@ -26,4 +26,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function comics() 
+    {
+        return $this->hasMany(Comic::class);
+    }
+    public function publish(Comic $comic) 
+    {
+        $this->comics()->save($comic);
+        // $comic = Comic::create([
+        //     'title' => request('title'),
+        //     'description' => request('description'),
+        //     'image_url' => '/images/' . $imageName,
+        //     'user_id' => auth()->id()
+        //     ]);
+    }
+
 }

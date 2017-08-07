@@ -12,6 +12,10 @@ class Comic extends Model
 	{
 		return $this->hasMany(ComicResponse::class);
 	}
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
 
 	public function addResponse($response_id) {
     	$this->responses()->create( [

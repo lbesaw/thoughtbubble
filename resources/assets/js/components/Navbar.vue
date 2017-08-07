@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar ">
+<nav class="navbar">
           <div class="navbar-brand">
             <a class="navbar-item" href="http://bulma.io">
               <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
@@ -167,39 +167,9 @@
             </div>
 
             <div class="navbar-end">
-              <a class="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" target="_blank">
-                Github
-              </a>
-              <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
-                Twitter
-              </a>
-              <div class="navbar-item">
-                <div class="field is-grouped">
-                  <p class="control">
-                    <a class="tw-button button"
-          data-social-network="Twitter"
-          data-social-action="tweet"
-          data-social-target="http://bulma.io"
-          target="_blank"
-          href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
-          <span class="icon">
-            <i class="fa fa-twitter"></i>
-          </span>
-          <span>
-            Tweet
-          </span>
-        </a>
-                  </p>
-                  <p class="control">
-                    <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.0.zip">
-                      <span class="icon">
-                        <i class="fa fa-download"></i>
-                      </span>
-                      <span>Download</span>
-                    </a>
-                  </p>
-                </div>
-              </div>
+            <slot name="loginlogout"></slot>
+            <slot name="register"></slot>
+
             </div>
           </div>
         </nav>

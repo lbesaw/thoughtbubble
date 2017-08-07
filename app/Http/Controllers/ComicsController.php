@@ -7,9 +7,14 @@ use App\Comic;
 class ComicsController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     public function index() {
-    	$comics = Comic::first();
-    	return view('comic.comic', compact('comics'));
+    	$comic = Comic::first();
+    	return view('comic.comic', compact('comic'));
     }
     public function show(Comic $comic) {
 		return view('comic.comic', compact('comic'));
@@ -28,13 +33,13 @@ class ComicsController extends Controller
     	request()->file('image_url')->move(
     		base_path() . '/public/images/', $imageName);
 
-    	$comic = Comic::create([
-    		'title' => request('title'),
-    		'description' => request('description'),
-    		'image_url' => '/images/' . $imageName,
-    		'user_id' => 0
-    		]);
-
+        auth()->user()->publish(
+            $comic = new Comic([
+                    'title' => request('title'),
+                    'description' => request('description'),
+                    'image_url' => '/images/' . $imageName
+                    ]));
+    
     	return redirect('/comic/'. $comic->id);
     }
 }

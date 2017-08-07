@@ -2,9 +2,31 @@
 
 @section('content')
 <div id="root">
-            <navbar></navbar>
+            <navbar>
+                <template slot="loginlogout">
+                @if(Auth::check())
+                    <a class="navbar-item" href="/logout">logout</a>
+                @else
+                    <a class="navbar-item" href="/login">login</a>
+                @endif
+                </template>
+                <template slot="register">
+                    @if(Auth::check())
+                       <a class="navbar-item" href="#"> {{ Auth::user()->name }} </a>
+                    @else
+                        <a class="navbar-item" href="/register">register</a>
+                    @endif
+                </template>
+            </navbar>
             <div class="container text-center" id="main-container">
                 <div class="box">
+                    <div class="columns">
+                        <div class="column has-text-left"> 
+                            {{$comic->user->name}}</div>
+                        <div class="column has-text-right"> 
+                            {{$comic->created_at->toFormattedDateString() }}
+                        </div>
+                    </div>
                     <img  id="comic-image" src="{{$comic->image_url}}">
                 </div>
                 <div class="reponses">
