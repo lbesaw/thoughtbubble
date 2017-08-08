@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ComicResponse extends Model
 {
     //
-    protected $fillable = ['comic_id', 'response_comic'];
+    protected $fillable = ['comic_id', 'response_comic', 'user_id'];
     public function comic() {
     	return $this->belongsTo(Comic::class);
     }

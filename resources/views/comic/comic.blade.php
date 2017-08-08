@@ -1,23 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div id="root">
-            <navbar>
-                <template slot="loginlogout">
-                @if(Auth::check())
-                    <a class="navbar-item" href="/logout">logout</a>
-                @else
-                    <a class="navbar-item" href="/login">login</a>
-                @endif
-                </template>
-                <template slot="register">
-                    @if(Auth::check())
-                       <a class="navbar-item" href="#"> {{ Auth::user()->name }} </a>
-                    @else
-                        <a class="navbar-item" href="/register">register</a>
-                    @endif
-                </template>
-            </navbar>
+
             <div class="container text-center" id="main-container">
                 <div class="box">
                     <div class="columns">
@@ -58,6 +42,5 @@
                             @include('layouts.errors')
                 	</div>
             </div>
-            <bottomnav></bottomnav>
-        </div>
+
 @endsection

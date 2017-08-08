@@ -17,7 +17,7 @@ class SessionsController extends Controller
     			]);
     	}
 
-    	return redirect()->home();
+    	return view('user.home');
 
     }
     public function create() 
