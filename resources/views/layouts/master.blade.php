@@ -20,7 +20,7 @@
                 </template>
                 <template slot="register">
                     @if(Auth::check())
-                       <a class="navbar-item" href="#"> {{ Auth::user()->name }} </a>
+                       <a class="navbar-item" href="/home"> {{ Auth::user()->name }} </a>
                     @else
                         <a class="navbar-item" href="/register">register</a>
                     @endif
