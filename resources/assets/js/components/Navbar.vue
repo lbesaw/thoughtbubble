@@ -15,7 +15,7 @@
           <div id="navMenuExample" class="navbar-menu">
             <div class="navbar-start">
               <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link  is-active" href="/documentation/overview/start/">
+                <a class="navbar-link  is-active" href="#">
                   Comics
                 </a>
                 <div class="navbar-dropdown ">

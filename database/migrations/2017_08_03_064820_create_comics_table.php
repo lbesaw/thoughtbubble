@@ -19,6 +19,8 @@ class CreateComicsTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->integer('user_id');
+            $table->integer('view_count')->default(0);
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

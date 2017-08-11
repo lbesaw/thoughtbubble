@@ -13,10 +13,12 @@ class ComicsController extends Controller
     }
 
     public function index() {
-    	$comic = Comic::first();
+    	$comic = Comic::inRandomOrder()->first();
+        $comic->increment('view_count', 1);
     	return view('comic.comic', compact('comic'));
     }
     public function show(Comic $comic) {
+        $comic->increment('view_count', 1);
 		return view('comic.comic', compact('comic'));
     }
     public function create() {
@@ -41,5 +43,17 @@ class ComicsController extends Controller
                     ]));
     
     	return redirect('/comic/'. $comic->id);
+    }
+    public function newest()
+    {
+        $comic = Comic::latest()->first();
+        $comic->increment('view_count', 1);
+        return view('comic.comic', compact('comic'));
+    }
+
+    public function top10()
+    {
+        $comics = Comic::orderBy('view_count', 'desc')->limit(10)->get();
+        return view('comic.top10', compact('comics'));
     }
 }

@@ -31885,7 +31885,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('a', {
     staticClass: "navbar-link  is-active",
     attrs: {
-      "href": "/documentation/overview/start/"
+      "href": "#"
     }
   }, [_vm._v("\n                  Comics\n                ")]), _vm._v(" "), _c('div', {
     staticClass: "navbar-dropdown "
