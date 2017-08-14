@@ -6,9 +6,9 @@
                 <div class="box">
                     <div class="columns">
                         <div class="column has-text-left"> 
-                            {{$comic->user->name}}</div>
+                            {{ $comic->title}}</div>
                         <div class="column has-text-right"> 
-                            {{$comic->created_at->toFormattedDateString() }}
+                            {{$comic->user->name .' - '. $comic->created_at->toFormattedDateString() }}
                         </div>
                     </div>
                     <img  id="comic-image" src="{{$comic->image_url}}">
@@ -19,7 +19,8 @@
                 			<div class="message-header">
                 				<p>
                 					{{ App\Comic::find($response->response_comic)->title }}
-                				</p>	{{$response->created_at->diffForHumans()}}
+                				</p>
+                                <span>	{{ App\Comic::find($response->response_comic)->user->name . ' - ' . $response->created_at->diffForHumans()}} </span>
                 			</div>
                 			<div class="message-body">
                 			<img src= "{{ App\Comic::find($response->response_comic)->image_url }}">
