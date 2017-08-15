@@ -18,11 +18,5 @@ window.Vue = require('vue');
 Vue.component('navbar', require('./components/Navbar.vue'));
 Vue.component('bottomnav', require('./components/Footer.vue'));
 const app = new Vue({
-    el: '#root',
-    data: {
-    	skills: ['x', 'y', 'z']
-    },
-    mounted() {
-    	axios.get('/skills').then(response => this.skills = response.data);
-    }
+    el: '#root'
 });

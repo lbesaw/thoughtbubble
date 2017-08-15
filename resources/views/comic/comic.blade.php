@@ -9,9 +9,15 @@
                             {{ $comic->title}}</div>
                         <div class="column has-text-right"> 
                             {{$comic->user->name .' - '. $comic->created_at->toFormattedDateString() }}
+                            @if (auth()->id() == $comic->user->id)
+                                <form style="float:right;margin-left:10px;" method="POST" action="/comic/{{$comic->id}}/delete">
+                                    {{ csrf_field() }}
+                                    <button class="button delete is-danger" aria-label="delete" type="submit" onclick="return confirm('Are you sure you want to delete this comic?');"></button>
+                                </form>
+                            @endif
                         </div>
                     </div>
-                    <img  id="comic-image" src="{{$comic->image_url}}">
+                    <img id="comic-image" src="{{$comic->image_url}}">
                 </div>
                 <div class="reponses">
                 	@foreach ($comic->responses as $response) 
@@ -42,6 +48,7 @@
 							</form>
                             @include('layouts.errors')
                 	</div>
+                </div>
             </div>
 
 @endsection

@@ -12,19 +12,39 @@ class ComicsController extends Controller
         $this->middleware('auth')->except(['index', 'show']);
     }
 
-    public function index() {
+    public function index() 
+    {
     	$comic = Comic::inRandomOrder()->first();
         $comic->increment('view_count', 1);
     	return view('comic.comic', compact('comic'));
     }
-    public function show(Comic $comic) {
+
+    public function destroy(Comic $comic) 
+    {
+        if($comic->user->id == auth()->id())
+        {
+            $comic->delete();
+            return redirect('/home');
+        }
+        else
+        {
+            return redirect('/');
+        }
+    }
+
+    public function show(Comic $comic) 
+    {
         $comic->increment('view_count', 1);
 		return view('comic.comic', compact('comic'));
     }
-    public function create() {
+
+    public function create() 
+    {
     	return view('comic.create');
     }
-    public function store() {
+
+    public function store() 
+    {
     	$this->validate(request(), [
     		'title' => 'required',
     		'image_url' => 'required|image'
@@ -44,6 +64,7 @@ class ComicsController extends Controller
     
     	return redirect('/comic/'. $comic->id);
     }
+
     public function newest()
     {
         $comic = Comic::latest()->first();

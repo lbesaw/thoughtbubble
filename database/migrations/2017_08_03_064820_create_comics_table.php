@@ -22,6 +22,7 @@ class CreateComicsTable extends Migration
             $table->integer('view_count')->default(0);
             $table->boolean('active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

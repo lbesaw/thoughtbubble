@@ -1036,17 +1036,7 @@ window.Vue = __webpack_require__(38);
 Vue.component('navbar', __webpack_require__(35));
 Vue.component('bottomnav', __webpack_require__(34));
 var app = new Vue({
-  el: '#root',
-  data: {
-    skills: ['x', 'y', 'z']
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.get('/skills').then(function (response) {
-      return _this.skills = response.data;
-    });
-  }
+  el: '#root'
 });
 
 /***/ }),
@@ -1976,7 +1966,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log('Navbar mounted.');
   }
 });
 
@@ -31779,7 +31769,7 @@ return jQuery;
 
 var Component = __webpack_require__(8)(
   /* script */
-  null,
+  __webpack_require__(41),
   /* template */
   __webpack_require__(37),
   /* scopeId */
@@ -42099,6 +42089,37 @@ module.exports = function(module) {
 
 module.exports = __webpack_require__(10);
 
+
+/***/ }),
+/* 41 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
 
 /***/ })
 /******/ ]);

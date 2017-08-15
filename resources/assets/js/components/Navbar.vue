@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('Navbar mounted.')
         }
     }
 </script>
