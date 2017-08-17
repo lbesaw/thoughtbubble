@@ -30,6 +30,7 @@
         @yield('content')
         <bottomnav></bottomnav>
         </div>
+
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script type="text/javascript" src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
         <script type="text/javascript" src="/js/app.js"></script>

@@ -34,7 +34,20 @@
                 		</article>
                 	@endforeach
                 	<hr>
-                	<div class="box">
+                	
+                    @if(Auth::check())
+                    <div class="box">
+                    <modal>
+                        <template slot="comics">
+                            @foreach(App\User::find(auth()->id())->comics as $possibleResponse) 
+                                <img src="{{ $possibleResponse->image_url }}">
+                            @endforeach
+                        </template>
+                    </modal>
+                    </div>
+                    @endif
+                    {{-- 
+
 	                	<form method="POST" action="/comic/{{ $comic->id }}/responses">
 	                	{{ csrf_field() }}
 	                		<div class="field">
@@ -45,10 +58,11 @@
 							    //ideally have a modal pop up and select an image associated with a user, for now we will just refer to a comic id
 							</div>
 							<button type="submit" class="button is-primary" id="add-comment">Add comment</button>
-							</form>
+							</form> --}}
                             @include('layouts.errors')
                 	</div>
                 </div>
             </div>
+
 
 @endsection
