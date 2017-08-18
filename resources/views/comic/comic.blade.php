@@ -20,6 +20,8 @@
                     <img id="comic-image" src="{{$comic->image_url}}">
                 </div>
                 <div class="reponses">
+                <hr>
+                <h1 class="has-text-left">Responses</h1>
                 	@foreach ($comic->responses as $response) 
                 		<article class="message">
                 			<div class="message-header">
@@ -40,26 +42,18 @@
                     <modal>
                         <template slot="comics">
                             @foreach(App\User::find(auth()->id())->comics as $possibleResponse) 
-                                <img src="{{ $possibleResponse->image_url }}">
+                                <div class="box" style="max-width:300px;">
+                                <form method="POST" action="/comic/{{ $comic->id }}/responses">
+                                {{ csrf_field() }}
+                                <input name="responseid" type="image" value="{{ $possibleResponse->id }}" src="{{ $possibleResponse->image_url }}" style="max-width:250px;">
+                                </form>
+                                </div>
                             @endforeach
                         </template>
                     </modal>
                     </div>
                     @endif
-                    {{-- 
-
-	                	<form method="POST" action="/comic/{{ $comic->id }}/responses">
-	                	{{ csrf_field() }}
-	                		<div class="field">
-							    <label class="label">Title</label>
-							    <div class="control">
-							      <input class="input" name="responseid" id="responseid" type="text" placeholder="Enter a comic ID" required>
-							    </div>
-							    //ideally have a modal pop up and select an image associated with a user, for now we will just refer to a comic id
-							</div>
-							<button type="submit" class="button is-primary" id="add-comment">Add comment</button>
-							</form> --}}
-                            @include('layouts.errors')
+                    @include('layouts.errors')
                 	</div>
                 </div>
             </div>

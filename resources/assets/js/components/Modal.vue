@@ -9,15 +9,18 @@
      		  <button class="delete" aria-label="close"></button>
     	   </header>
     		<section class="modal-card-body">
+        <div class="has-text-centered">
+        poopie
      	 		<slot name="comics"></slot>
     		</section>
+        </div>
     		<footer class="modal-card-foot">
       			<button class="button is-danger">Cancel</button>
     		</footer>
   		</div>
 	</div>
   </div>
-</template>
+</template>  
 
 <script>
   var toggleModal = function() {

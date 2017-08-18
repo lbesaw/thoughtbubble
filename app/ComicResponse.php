@@ -11,6 +11,9 @@ class ComicResponse extends Model
     public function comic() {
     	return $this->belongsTo(Comic::class);
     }
+    public function responseComics() {
+    	return $this->hasMany(Comic::class);
+    }
     public function user() {
     	return $this->belongsTo(User::class);
     }

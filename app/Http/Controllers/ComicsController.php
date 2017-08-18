@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comic;
+use App\ComicResponse;
 class ComicsController extends Controller
 {
     //
@@ -23,6 +24,7 @@ class ComicsController extends Controller
     {
         if($comic->user->id == auth()->id())
         {
+            \DB::delete('delete from comic_responses where response_comic = ?', [$comic->id]);
             $comic->delete();
             return redirect('/home');
         }

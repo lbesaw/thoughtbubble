@@ -29,10 +29,12 @@ Vue.component('modal', {
     		  		<p class="modal-card-title">Choose a comic</p>
      		  		<button class="delete" aria-label="close" v-on:click="toggleModal"></button>
     	   		</header>
-    			<section class="modal-card-body">
+            <section class="modal-card-body">
+            
      	 			<slot name="comics"></slot>
+            
     			</section>
-    			<footer class="modal-card-foot">
+          <footer class="modal-card-foot">
       				<button class="button is-danger" v-on:click="toggleModal">Cancel</button>
     			</footer>
   			</div>
