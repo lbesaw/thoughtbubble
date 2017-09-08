@@ -2,7 +2,7 @@
 <nav class="navbar">
           <div class="navbar-brand">
             <a class="navbar-item" href="/">
-              <img src="/images/comicserv-logo.png" alt="ComicServ: a comic based social platform" width="112" height="28">
+              <img src="/images/comicserv-logo.png" alt="ThoughtBubble: a comic based social platform" width="112" height="28">
             </a>
 
             <div class="navbar-burger burger" data-target="navMenuExample">
@@ -37,8 +37,8 @@
                 <span class="emoji">🎨</span>
                 Upload Comic
               </a>
-              <a class="navbar-item " href="http://bulma.io/love/">
-                <span class="emoji">❤️</span>
+              <a class="navbar-item " href="http://github.com/lbesaw/thoughtbubble">
+                <span class="emoji">Contribute</span>
                 Love
               </a>
             </div>
