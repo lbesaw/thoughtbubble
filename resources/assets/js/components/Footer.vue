@@ -2,9 +2,9 @@
 	<footer class="footer">
 	  <div class="container">
 	    <div class="content has-text-centered">
+	    <hr />
 	      <p>
-	        Created with <strong>Bulma</strong> <a class="icon" href="https://github.com/jgthms/bulma">
-	          		<i class="fa fa-github"></i>
+	        Created with <a href="https://github.com/jgthms/bulma"><strong>Bulma</strong> 
 	        	</a>
 	        </p>
 	    </div>

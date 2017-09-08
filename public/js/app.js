@@ -31883,14 +31883,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('div', {
     staticClass: "content has-text-centered"
-  }, [_c('p', [_vm._v("\n        Created with "), _c('strong', [_vm._v("Bulma")]), _vm._v(" "), _c('a', {
-    staticClass: "icon",
+  }, [_c('hr'), _vm._v(" "), _c('p', [_vm._v("\n        Created with "), _c('a', {
     attrs: {
       "href": "https://github.com/jgthms/bulma"
     }
-  }, [_c('i', {
-    staticClass: "fa fa-github"
-  })])])])])])
+  }, [_c('strong', [_vm._v("Bulma")])])])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
