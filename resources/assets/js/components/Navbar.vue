@@ -38,8 +38,7 @@
                 Upload Comic
               </a>
               <a class="navbar-item " href="http://github.com/lbesaw/thoughtbubble">
-                <span class="emoji">Contribute</span>
-                Love
+                Contribute
               </a>
             </div>
 
