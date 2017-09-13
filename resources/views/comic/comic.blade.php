@@ -5,6 +5,9 @@
             <div class="container text-center" id="main-container">
                 <div class="box">
                     <div class="columns">
+                        <div class="column has-text-right">
+                            <social> </social>
+                        </div>
                         <div class="column has-text-left"> 
                             {{ $comic->title}}</div>
                         <div class="column has-text-right"> 
@@ -17,7 +20,7 @@
                             @endif
                         </div>
                     </div>
-                    <social> </social>
+
                     <img id="comic-image" src="{{$comic->image_url}}">
                 </div>
                 <div class="reponses">
