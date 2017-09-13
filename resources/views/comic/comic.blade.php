@@ -3,8 +3,9 @@
 @section('content')
 
             <div class="container text-center" id="main-container">
+            <social> </social>
                 <div class="box">
-                    <social> </social>
+                    
                     <div class="columns">
                         <div class="column has-text-left"> 
                             {{ $comic->title}}</div>

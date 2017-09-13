@@ -3,7 +3,7 @@
 	<nav class="level">
 		<div class="level-left">
 		</div>
-		<div class="level-right">
+		<div class="level-right is-white">
 			<div class="level-item">
 				<img src="/images/twitter.png">
 			</div>
