@@ -5,13 +5,13 @@
 		</div>
 		<div class="level-right">
 			<div class="level-item">
-				Twitter
+				<img src="images/twitter.png">
 			</div>
 			<div class="level-item">
-				Facebook
+				<img src="images/facebook.png">
 			</div>
 			<div class="level-item">
-				Copy link
+				<img src="images/copy.png">
 		    </div>
 		</div>
 	</nav>
