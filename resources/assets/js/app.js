@@ -18,6 +18,7 @@ window.Vue = require('vue');
 Vue.component('navbar', require('./components/Navbar.vue'));
 // Vue.component('modal', require('./components/Modal.vue'));
 Vue.component('bottomnav', require('./components/Footer.vue'));
+Vue.component('social', require('./components/Social.vue'));
 Vue.component('modal', {
 	template: `
 	<div>

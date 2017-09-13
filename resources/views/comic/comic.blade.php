@@ -17,6 +17,7 @@
                             @endif
                         </div>
                     </div>
+                    <social> </social>
                     <img id="comic-image" src="{{$comic->image_url}}">
                 </div>
                 <div class="reponses">
