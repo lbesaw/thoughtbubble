@@ -1,6 +1,8 @@
 <template>
 <div>
 	<nav class="level">
+		<div class="level-left">
+		</div>
 		<div class="level-right">
 			<div class="level-item">
 				Twitter
