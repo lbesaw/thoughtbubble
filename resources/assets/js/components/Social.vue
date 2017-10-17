@@ -5,15 +5,13 @@
 		</div>
 		<div class="level-right is-white">
 			<div class="level-item">
-				<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world">
-					<img src="/images/twitter.png">
-				</a>
+				<slot name="twitter"></slot>
 			</div>
 			<div class="level-item">
-				<img src="/images/facebook.png">
+				<slot name="facebook"></slot>
 			</div>
 			<div class="level-item">
-				<img src="/images/copy.png">
+				<slot name="copy"></slot>
 		    </div>
 		</div>
 	</nav>

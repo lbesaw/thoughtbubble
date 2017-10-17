@@ -3,7 +3,21 @@
 @section('content')
 
             <div class="container text-center" id="main-container">
-            <social> </social>
+            <social>
+                <template slot="twitter">
+                    <a href="https://twitter.com/intent/tweet?text=Check%20out%20%27{{$comic->title}}%27%20at%20http%3A%2F%2Fthoughtbubble.cc%2Fcomic%2F{{$comic->id}}">
+                        <img src="/images/twitter.png">
+                    </a>
+                </template>
+                <template slot="facebook">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://thoughtbubble.cc/comics/{{$comic->id}}">
+                        <img src="/images/facebook.png">
+                    </a>
+                </template>
+                <template slot="copy">
+                    <img src="/images/copy.png">
+                </template>
+            </social>
                 <div class="box">
                     
                     <div class="columns">
