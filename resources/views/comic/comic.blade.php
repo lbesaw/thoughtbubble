@@ -35,11 +35,8 @@
                 </div>
                 <div class="reponses">
                 <hr>
-                <?php
-                    if($comic->responses->count() > 0) {
-                        echo '<h3 class="has-text-left">Responses</h3>';
-                    } 
-                ?>
+                @if($comic->responses->count() > 0) 
+                    <h3 class="has-text-left">Responses</h3>
                    	@foreach ($comic->responses as $response) 
                 		<article class="message">
                 			<div class="message-header">
@@ -54,6 +51,7 @@
                 		</article>
                 	@endforeach
                 	<hr>
+                @endif
                 	
                     @if(Auth::check())
                     <div class="box">
