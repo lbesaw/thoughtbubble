@@ -10,9 +10,6 @@
 			<div class="level-item">
 				<slot name="facebook"></slot>
 			</div>
-			<div class="level-item">
-				<slot name="copy"></slot>
-		    </div>
 		</div>
 	</nav>
 </div>
