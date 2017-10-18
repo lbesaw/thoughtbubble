@@ -1,4 +1,4 @@
-@extends('layouts.master', ['title' => 'x'])
+@extends('layouts.master', ['title' => 'thoughtbubble.cc - '. $comic->title])
 
 @section('content')
             <meta property="og:url"                content="http://thoughtbubble.cc/comics/{{ $comic->id }}" />
