@@ -14,9 +14,11 @@
                         <img src="/images/facebook.png">
                     </a>
                 </template>
-                <a id="copyToClipboard" onClick="copyToClipboard('http://thoughtbubble.cc/comics/{{ $comic->id }}')" href="#">
-                    <img src="/images/copy.png">
-                </a>
+                <template slot="copy">
+                    <a id="copyToClipboard" onClick="copyToClipboard('http://thoughtbubble.cc/comics/{{ $comic->id }}')" href="#">
+                        <img src="/images/copy.png">
+                    </a>
+                </template>
             </social>
                 <div class="box">
                     

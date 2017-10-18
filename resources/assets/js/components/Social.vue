@@ -19,6 +19,9 @@
 </template>  
 
 <script>
+
+	
+
    export default {
         mounted() {
             console.log('social mounted.')
