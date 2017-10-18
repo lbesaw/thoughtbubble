@@ -1,4 +1,4 @@
-@extends ('layouts.master')
+@extends ('layouts.master', ['title' => 'thoughtbubble.cc - '. $comic->title])
 @section('content')
         <ul>
             @foreach ($comics as $comic)

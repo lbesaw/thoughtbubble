@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'thoughtbubble.cc - login'])
 
 @section('content')
 <div class="container">
