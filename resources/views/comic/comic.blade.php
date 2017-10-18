@@ -36,12 +36,11 @@
                 <div class="reponses">
                 <hr>
                 <?php
-                    if($comic->responses) {
+                    if($comic->responses->count() > 0) {
                         echo '<h3 class="has-text-left">Responses</h3>';
                     } 
                 ?>
-                <h3 class="has-text-left">Responses</h3>
-                	@foreach ($comic->responses as $response) 
+                   	@foreach ($comic->responses as $response) 
                 		<article class="message">
                 			<div class="message-header">
                 				<p>
