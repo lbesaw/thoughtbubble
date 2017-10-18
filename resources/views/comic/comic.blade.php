@@ -36,7 +36,7 @@
                 <div class="reponses">
                 <hr>
                 <?php
-                    if($comic->responses->count() > 0) {
+                    if($comic->responses) {
                         echo '<h3 class="has-text-left">Responses</h3>';
                     } 
                 ?>
