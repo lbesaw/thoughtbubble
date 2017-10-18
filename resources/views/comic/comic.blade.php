@@ -14,9 +14,9 @@
                         <img src="/images/facebook.png">
                     </a>
                 </template>
-                <template slot="copy">
+                <a id="copyToClipboard" onClick="copyToClipboard('http://thoughtbubble.cc/comics/{{ $comic->id }}')" href="#">
                     <img src="/images/copy.png">
-                </template>
+                </a>
             </social>
                 <div class="box">
                     
@@ -74,6 +74,11 @@
                 	</div>
                 </div>
             </div>
-
+            <script language="JavaScript">
+                function copyToClipboard(text) {
+                    copied = text.createTextRange();
+                    copied.execCommand("Copy");
+                }
+            </script>
 
 @endsection
