@@ -1,4 +1,4 @@
-@extends ('layouts.master')
+@extends ('layouts.master', ['title' => 'thoughtbubble.cc - home'])
 
 @section ('content')
 	<h1>user home</h1>
