@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css">
         <link rel="stylesheet" type="text/css" href="/css/app.css">
-        <title>ThoughtBubble</title>
+        <title>{{ $title }}</title>
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106014814-2"></script>
         <script>
@@ -16,7 +16,7 @@
 
           gtag('config', 'UA-106014814-2');
         </script>
-        </head>
+    </head>
         <body>
         <div id="root">
             <navbar>

@@ -1,12 +1,12 @@
-@extends('layouts.master')
+@extends('layouts.master', ['title' => 'x'])
 
 @section('content')
-    <meta property="og:url"                content="http://thoughtbubble.cc/comics/{{ $comic->id }}" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="{{ $comic->title }}" />
-    <meta property="og:description"        content="Check out this comic on thoughtbubble.cc! {{ $comic->description }}" />
-    <meta property="og:image"              content="{{ $comic->image_url }}" />
-    <title>thoughtbubble.cc - {{$comic->title }}</title>
+            <meta property="og:url"                content="http://thoughtbubble.cc/comics/{{ $comic->id }}" />
+            <meta property="og:type"               content="article" />
+            <meta property="og:title"              content="{{ $comic->title }}" />
+            <meta property="og:description"        content="Check out this comic on thoughtbubble.cc! {{ $comic->description }}" />
+            <meta property="og:image"              content="{{ $comic->image_url }}" />
+
             
             <div class="container text-center" id="main-container">
             <social>
